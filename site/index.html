@@ -1,0 +1,74 @@
+---
+layout: default
+---
+<section id="home">
+  <div class="background"></div>
+  <div class="uk-grid">
+    <div class="uk-width-1-1 uk-width-small-4-5 uk-width-medium-3-5 uk-width-large-2-5 uk-container-center">
+      <div class="uk-vertical-align">
+        <div class="uk-vertical-align-middle">
+          <h1 class="uk-text-center">
+            William Martins
+            <small>Designer & Front-End Developer</small>
+          </h1>
+        </div>
+        <ul>
+          <li class="icon-in"><a target="_blank" href="https://br.linkedin.com/in/williamxsp">LinkedIn</a></li>
+          <li class="icon-facebook"><a target="_blank" href="https://www.fb.com/{{site.facebook_username}}">Twitter</a></li>
+          <li class="icon-twitter"><a target="_blank" href="https://twitter.com/williamxsp">Twitter</a></li>
+          <li class="icon-behance"><a target="_blank" href="https://www.behance.net/williamxsp">Behance</a></li>
+          <li class="icon-email">
+            <script type="text/javascript" language="javascript">
+              <!--
+                { coded = "dKMMKG1@dOl2E.5h1"
+                  key = "eyvD2JckpLYuirzC6OFbaEx5VPAfSKwUto0RlGH9mjN3TqId74hQgMBns1XW8Z"
+                  shift=coded.length
+                  link=""
+                  for (i=0; i<coded.length; i++) {
+                    if (key.indexOf(coded.charAt(i))==-1) {
+                      ltr = coded.charAt(i)
+                      link += (ltr)
+                    }
+                    else {
+                      ltr = (key.indexOf(coded.charAt(i))-shift+key.length) % key.length
+                      link += (key.charAt(ltr))
+                    }
+                  }
+                document.write("<a target='_blank' href='mailto:"+link+"'>Email</a>")
+                }
+                //-->
+            </script>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="jobs">
+  <div class="uk-container uk-container-center">
+    <div class="uk-grid">
+      <div class="uk-width-1-1">
+        <header>
+          <h1 class="headline">Últimos Trabalhos</h1>
+        </header>
+      </div>
+    </div>
+    <section class="uk-grid" id="jobs-list">
+      {% for job in site.jobs %}
+      <article class="uk-width-1-1 uk-width-medium-1-2 uk-width-large-1-3" >
+        <div class="job">
+          <a target="_blank" href="http://{{job.link}}">
+            <figure>
+              <img src="img/{{job.image}}" class="uk-responsive-width" alt="{{job.nome}} construído com {{job.tecnologias}}">
+            </figure>
+            <footer>
+              <h2>{{job.nome}}</h2>
+              <p>{{job.tecnologias}}</p>
+            </footer>
+          </a>
+        </div>
+      </article>
+      {% endfor %}
+    </section>
+  </div>
+</section>

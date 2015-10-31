@@ -1,0 +1,22 @@
+# Site settings
+title: Web42 - William Martins
+email: william@web42.com.br
+description: Design e Desenvolvimento para a web
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "localhost:4000" # the base hostname & protocol for your site
+twitter_username: williamxsp
+github_username:  williamxsp
+facebook_username:  williamxsp
+behance_username:  williamxsp
+linkedin_username:  williamxsp
+
+# Build settings
+markdown: kramdown
+
+sass:
+  style: compressed
+
+collections:
+  jobs:
+    output: true
+    permalink: /job/:path/
